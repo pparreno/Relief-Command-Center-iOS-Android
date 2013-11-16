@@ -273,11 +273,7 @@
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
     UIEdgeInsets contentInsets;
-    if (IS_IPHONE_5) {
-        contentInsets = UIEdgeInsetsMake(self.tableView.contentInset.top, 0.0, kbSize.height, 0.0);
-    } else {
-        contentInsets = UIEdgeInsetsMake(self.tableView.contentInset.top, 0.0, kbSize.height+90, 0.0);
-    }
+    contentInsets = UIEdgeInsetsMake(self.tableView.contentInset.top, 0.0, kbSize.height, 0.0);
     
     self.tableView.contentInset = contentInsets;
     self.tableView.scrollIndicatorInsets = contentInsets;
