@@ -6,25 +6,24 @@
 //  Copyright (c) 2013 Paul John Parreno. All rights reserved.
 //
 
-#import "RCCAddRefugeeViewController.h"
+#import "RCCRefugeeVC.h"
 
 #import "RCCImageContainerTableViewCell.h"
 #import "RCCTextFieldTableViewCell.h"
-
+#import "RCCTextLabelTableViewCell.h"
 
 #define IDENTIFIER_ROW_IMAGECONTAINER @"RCC_TROW1"
 #define IDENTIFIER_ROW_TEXTFIELD @"RCC_TROW_TEXTFIELD"
 
 
-@interface RCCAddRefugeeViewController ()
+@interface RCCRefugeeVC ()
 
-@property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 @property (nonatomic, strong) NSMutableArray *fieldsArray;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 @end
 
-@implementation RCCAddRefugeeViewController
+@implementation RCCRefugeeVC
 
 - (void)viewDidLoad
 {
@@ -35,8 +34,8 @@
     
     self.fieldsArray = [NSMutableArray array];
     
-    [self setKeyboardControls:[[BSKeyboardControls alloc] init]];
-    [self.keyboardControls setDelegate:self];
+//    [self setKeyboardControls:[[BSKeyboardControls alloc] init]];
+//    [self.keyboardControls setDelegate:self];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -92,70 +91,71 @@
             //                RCCImageContainerTableViewCell *row1Cell = (RCCImageContainerTableViewCell *)cell;
             
         }
-
-    } else {
         
-        cellIdentifier = IDENTIFIER_ROW_TEXTFIELD;
-        cell = (RCCTextFieldTableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    } else {
+
+        cellIdentifier = @"RCC_TROW_TEXTLABEL";
+        cell = (RCCTextLabelTableViewCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         
         if (cell == nil) {
-            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"RCCTextFieldTableViewCell" owner:nil options:nil];
+            NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"RCCTextLabelTableViewCell" owner:nil options:nil];
             
             for (id currentObject in topLevelObjects) {
-                if ([currentObject isKindOfClass:[RCCTextFieldTableViewCell class]]) {
-                    cell = (RCCTextFieldTableViewCell *)currentObject;
+                if ([currentObject isKindOfClass:[RCCTextLabelTableViewCell class]]) {
+                    cell = (RCCTextLabelTableViewCell*)currentObject;
                     break;
                 }
             }
             
-            RCCTextFieldTableViewCell *rowCell = (RCCTextFieldTableViewCell *)cell;
+            RCCTextLabelTableViewCell *rowCell = (RCCTextLabelTableViewCell *)cell;
             
-            rowCell.textField.delegate = self;
+//            rowCell.textLabel.
+//            rowCell.textField.delegate = self;
             
-            self.keyboardControls.fields = nil;
-            [self.fieldsArray addObject:rowCell.textField];
-            self.keyboardControls.fields = self.fieldsArray;
-        
+//            self.keyboardControls.fields = nil;
+            [self.fieldsArray addObject:rowCell.textLabel];
+//            self.keyboardControls.fields = self.fieldsArray;
+            
             switch (indexPath.row) {
                 case 1:
                 {
-                    rowCell.textField.placeholder = @"First Name";
+                    rowCell.textLabel.text = @"First Name";
                 } break;
                 case 2:
                 {
-                    rowCell.textField.placeholder = @"Last Name";
+                    rowCell.textLabel.text = @"Last Name";
                 } break;
                 case 3:
                 {
-                    rowCell.textField.placeholder = @"Sex";
+                    rowCell.textLabel.text = @"Sex";
                 } break;
                 case 4:
                 {
-                    rowCell.textField.placeholder = @"Status";
+                    rowCell.textLabel.text = @"Status";
                 } break;
                 case 5:
                 {
-                    rowCell.textField.placeholder = @"Age";
+                    rowCell.textLabel.text = @"Age";
                 } break;
                 case 6:
                 {
-                    rowCell.textField.placeholder = @"Street Address";
+                    rowCell.textLabel.text = @"Street Address";
                 } break;
                 case 7:
                 {
-                    rowCell.textField.placeholder = @"City";
+                    rowCell.textLabel.text = @"City";
                 } break;
                 case 8:
                 {
-                    rowCell.textField.placeholder = @"Province";
+                    rowCell.textLabel.text = @"Province";
                 } break;
                 case 9:
                 {
-                    rowCell.textField.placeholder = @"Last Known Location";
+                    rowCell.textLabel.text = @"Last Known Location";
                 } break;
-    
+                    
             }
-        
+            
         }
     }
     
@@ -187,25 +187,7 @@
     [self.tableView scrollRectToVisible:view.frame animated:YES];
 }
 
-- (void)keyboardControlsDonePressed:(BSKeyboardControls *)keyboardControls
-{
-    NSLog(@"Done Pressed!");
-    [self.keyboardControls.activeField resignFirstResponder];
-}
 
-
-#pragma mark - UITextFieldDelegate
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    [self.keyboardControls setActiveField:textField];
-    [self.keyboardControls.activeField isFirstResponder];
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField
-{
-  
-}
 
 #pragma mark - USER DEFINED METHODS
 

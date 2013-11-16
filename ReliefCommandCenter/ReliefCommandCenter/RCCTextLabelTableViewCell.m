@@ -1,14 +1,14 @@
 //
-//  RCCTextFieldTableViewCell.m
+//  RCCTextLabelTableViewCell.m
 //  ReliefCommandCenter
 //
-//  Created by Paul John Parreno on 11/17/13.
+//  Created by ValiantL on 11/17/13.
 //  Copyright (c) 2013 Paul John Parreno. All rights reserved.
 //
 
-#import "RCCTextFieldTableViewCell.h"
+#import "RCCTextLabelTableViewCell.h"
 
-@implementation RCCTextFieldTableViewCell
+@implementation RCCTextLabelTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

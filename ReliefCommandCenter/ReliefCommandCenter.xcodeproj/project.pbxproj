@@ -28,6 +28,12 @@
 		4CB471A41837DD4100D2102A /* RCCTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471A31837DD4100D2102A /* RCCTextFieldTableViewCell.xib */; };
 		4CB471B01837E16A00D2102A /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471A81837E16A00D2102A /* BSKeyboardControls.m */; };
 		4CB471B11837E16A00D2102A /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471A91837E16A00D2102A /* BSKeyboardControls.strings */; };
+		8406CF9E1837F18000FD59D1 /* RCCRefugeeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406CF9C1837F18000FD59D1 /* RCCRefugeeVC.m */; };
+		8406CF9F1837F18000FD59D1 /* RCCRefugeeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8406CF9D1837F18000FD59D1 /* RCCRefugeeVC.xib */; };
+		8406CFC41837FC8D00FD59D1 /* RCCTextLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406CFC31837FC8D00FD59D1 /* RCCTextLabelTableViewCell.m */; };
+		8406CFC51837FC8D00FD59D1 /* RCCTextLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8406CFC31837FC8D00FD59D1 /* RCCTextLabelTableViewCell.m */; };
+		8406CFCA1837FD9F00FD59D1 /* RCCTextLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8406CFC91837FD9F00FD59D1 /* RCCTextLabelTableViewCell.xib */; };
+		8406CFCB1837FD9F00FD59D1 /* RCCTextLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8406CFC91837FD9F00FD59D1 /* RCCTextLabelTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,12 @@
 		4CB471AD1837E16A00D2102A /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/BSKeyboardControls.strings"; sourceTree = "<group>"; };
 		4CB471AE1837E16A00D2102A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
 		4CB471AF1837E16A00D2102A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		8406CF9B1837F18000FD59D1 /* RCCRefugeeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRefugeeVC.h; sourceTree = "<group>"; };
+		8406CF9C1837F18000FD59D1 /* RCCRefugeeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRefugeeVC.m; sourceTree = "<group>"; };
+		8406CF9D1837F18000FD59D1 /* RCCRefugeeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCRefugeeVC.xib; sourceTree = "<group>"; };
+		8406CFC21837FC8D00FD59D1 /* RCCTextLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCTextLabelTableViewCell.h; sourceTree = "<group>"; };
+		8406CFC31837FC8D00FD59D1 /* RCCTextLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCTextLabelTableViewCell.m; sourceTree = "<group>"; };
+		8406CFC91837FD9F00FD59D1 /* RCCTextLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCTextLabelTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +190,7 @@
 		4CB471951837D04600D2102A /* RCC Custom Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				8406CFA01837F5FB00FD59D1 /* RCCTextLabelTableViewCell */,
 				4CB4719F1837DCDB00D2102A /* RCCTextFieldTableViewCell */,
 				4CB4719E1837DCCA00D2102A /* RCCImageContainerTableViewCell */,
 			);
@@ -241,11 +254,24 @@
 		4CB471B31837EB1800D2102A /* Add Refugee VC */ = {
 			isa = PBXGroup;
 			children = (
+				8406CF9B1837F18000FD59D1 /* RCCRefugeeVC.h */,
+				8406CF9C1837F18000FD59D1 /* RCCRefugeeVC.m */,
+				8406CF9D1837F18000FD59D1 /* RCCRefugeeVC.xib */,
 				4CB471731837CC7900D2102A /* RCCAddRefugeeViewController.h */,
 				4CB471741837CC7900D2102A /* RCCAddRefugeeViewController.m */,
 				4CB471931837CD2100D2102A /* RCCAddRefugeeViewController.xib */,
 			);
 			name = "Add Refugee VC";
+			sourceTree = "<group>";
+		};
+		8406CFA01837F5FB00FD59D1 /* RCCTextLabelTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8406CFC21837FC8D00FD59D1 /* RCCTextLabelTableViewCell.h */,
+				8406CFC31837FC8D00FD59D1 /* RCCTextLabelTableViewCell.m */,
+				8406CFC91837FD9F00FD59D1 /* RCCTextLabelTableViewCell.xib */,
+			);
+			name = RCCTextLabelTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,8 +361,10 @@
 				4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */,
 				4CB4719D1837DBAE00D2102A /* avatar@2x.png in Resources */,
 				4CB471771837CC7900D2102A /* Images.xcassets in Resources */,
+				8406CF9F1837F18000FD59D1 /* RCCRefugeeVC.xib in Resources */,
 				4CB471941837CD2200D2102A /* RCCAddRefugeeViewController.xib in Resources */,
 				4CB471691837CC7900D2102A /* InfoPlist.strings in Resources */,
+				8406CFCA1837FD9F00FD59D1 /* RCCTextLabelTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8406CFCB1837FD9F00FD59D1 /* RCCTextLabelTableViewCell.xib in Resources */,
 				4CB471881837CC7900D2102A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +390,8 @@
 				4CB471A21837DD2F00D2102A /* RCCTextFieldTableViewCell.m in Sources */,
 				4CB471751837CC7900D2102A /* RCCAddRefugeeViewController.m in Sources */,
 				4CB471B01837E16A00D2102A /* BSKeyboardControls.m in Sources */,
+				8406CFC41837FC8D00FD59D1 /* RCCTextLabelTableViewCell.m in Sources */,
+				8406CF9E1837F18000FD59D1 /* RCCRefugeeVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8406CFC51837FC8D00FD59D1 /* RCCTextLabelTableViewCell.m in Sources */,
 				4CB4718A1837CC7900D2102A /* ReliefCommandCenterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +608,7 @@
 				4CB4718F1837CC7900D2102A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CB471901837CC7900D2102A /* Build configuration list for PBXNativeTarget "ReliefCommandCenterTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +617,7 @@
 				4CB471921837CC7900D2102A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
