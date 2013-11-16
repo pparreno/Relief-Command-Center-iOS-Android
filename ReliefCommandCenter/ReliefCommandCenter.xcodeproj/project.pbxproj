@@ -21,6 +21,9 @@
 		4CB471881837CC7900D2102A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471861837CC7900D2102A /* InfoPlist.strings */; };
 		4CB4718A1837CC7900D2102A /* ReliefCommandCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471891837CC7900D2102A /* ReliefCommandCenterTests.m */; };
 		4CB471941837CD2200D2102A /* RCCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471931837CD2100D2102A /* RCCViewController.xib */; };
+		4CB471981837D08A00D2102A /* RCCImageContainerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */; };
+		4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */; };
+		4CB4719D1837DBAE00D2102A /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CB4719C1837DBAE00D2102A /* avatar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		4CB471871837CC7900D2102A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CB471891837CC7900D2102A /* ReliefCommandCenterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReliefCommandCenterTests.m; sourceTree = "<group>"; };
 		4CB471931837CD2100D2102A /* RCCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCViewController.xib; sourceTree = "<group>"; };
+		4CB471961837D08A00D2102A /* RCCImageContainerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCImageContainerTableViewCell.h; sourceTree = "<group>"; };
+		4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCImageContainerTableViewCell.m; sourceTree = "<group>"; };
+		4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCImageContainerTableViewCell.xib; sourceTree = "<group>"; };
+		4CB4719C1837DBAE00D2102A /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +119,8 @@
 		4CB471641837CC7900D2102A /* ReliefCommandCenter */ = {
 			isa = PBXGroup;
 			children = (
+				4CB4719B1837DB9900D2102A /* images */,
+				4CB471951837D04600D2102A /* RCC Custom Table View Cells */,
 				4CB4716D1837CC7900D2102A /* RCCAppDelegate.h */,
 				4CB4716E1837CC7900D2102A /* RCCAppDelegate.m */,
 				4CB471731837CC7900D2102A /* RCCViewController.h */,
@@ -150,6 +159,24 @@
 				4CB471861837CC7900D2102A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CB471951837D04600D2102A /* RCC Custom Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4CB471961837D08A00D2102A /* RCCImageContainerTableViewCell.h */,
+				4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */,
+				4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */,
+			);
+			name = "RCC Custom Table View Cells";
+			sourceTree = "<group>";
+		};
+		4CB4719B1837DB9900D2102A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				4CB4719C1837DBAE00D2102A /* avatar@2x.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */,
+				4CB4719D1837DBAE00D2102A /* avatar@2x.png in Resources */,
 				4CB471771837CC7900D2102A /* Images.xcassets in Resources */,
 				4CB471941837CD2200D2102A /* RCCViewController.xib in Resources */,
 				4CB471691837CC7900D2102A /* InfoPlist.strings in Resources */,
@@ -250,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB471981837D08A00D2102A /* RCCImageContainerTableViewCell.m in Sources */,
 				4CB4716B1837CC7900D2102A /* main.m in Sources */,
 				4CB4716F1837CC7900D2102A /* RCCAppDelegate.m in Sources */,
 				4CB471751837CC7900D2102A /* RCCViewController.m in Sources */,

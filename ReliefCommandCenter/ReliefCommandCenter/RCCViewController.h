@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCCViewController : UIViewController
+@interface RCCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
 
 @end
