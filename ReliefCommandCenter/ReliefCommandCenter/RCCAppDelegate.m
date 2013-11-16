@@ -7,12 +7,36 @@
 //
 
 #import "RCCAppDelegate.h"
+#import "RCCViewController.h"
+
+@interface RCCAppDelegate ()
+
+@property UINavigationController *navigationController;
+
+@end
 
 @implementation RCCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    
+    RCCViewController *rootVC = [[RCCViewController alloc] init];
+    
+    
+    self.navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[BMUtils BMWhiteTranslucent01]] forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationController.navigationBar.translucent = YES;
+    
+    // Instantiate your PKRevealController.
+    // Set it as your root view controller.
+    self.window.rootViewController = self.navigationController;
+    [self.window makeKeyAndVisible];
+    return YES;
     return YES;
 }
 							
