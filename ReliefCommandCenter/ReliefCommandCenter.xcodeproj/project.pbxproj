@@ -233,6 +233,7 @@
 		4CB471B21837EB0600D2102A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4CB471B41837ED2D00D2102A /* Camera VC */,
 				4CB471B31837EB1800D2102A /* Add Refugee VC */,
 			);
 			name = "View Controllers";
@@ -246,6 +247,13 @@
 				4CB471931837CD2100D2102A /* RCCAddRefugeeViewController.xib */,
 			);
 			name = "Add Refugee VC";
+			sourceTree = "<group>";
+		};
+		4CB471B41837ED2D00D2102A /* Camera VC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Camera VC";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -576,6 +584,7 @@
 				4CB4718F1837CC7900D2102A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CB471901837CC7900D2102A /* Build configuration list for PBXNativeTarget "ReliefCommandCenterTests" */ = {
 			isa = XCConfigurationList;
@@ -584,6 +593,7 @@
 				4CB471921837CC7900D2102A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

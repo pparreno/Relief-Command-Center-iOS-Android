@@ -21,6 +21,8 @@
 @property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 @property (nonatomic, strong) NSMutableArray *fieldsArray;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) UIImagePickerController *imagePicker;
+@property (nonatomic, strong) UIImageView *targetImageView;
 
 @end
 
@@ -89,7 +91,9 @@
                 }
             }
             
-            //                RCCImageContainerTableViewCell *row1Cell = (RCCImageContainerTableViewCell *)cell;
+            RCCImageContainerTableViewCell *row1Cell = (RCCImageContainerTableViewCell *)cell;
+            self.targetImageView = row1Cell.photoView;
+            [row1Cell.editButton addTarget:self action:@selector(presentActionsheetForMedia) forControlEvents:UIControlEventTouchUpInside];
             
         }
 
@@ -200,6 +204,16 @@
 {
     [self.keyboardControls setActiveField:textField];
     [self.keyboardControls.activeField isFirstResponder];
+    
+     UIView *view;
+    
+    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        view = textField.superview.superview;
+    } else {
+        view = textField.superview.superview.superview;
+    }
+    
+    [self.tableView scrollRectToVisible:view.frame animated:YES];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
@@ -207,14 +221,64 @@
   
 }
 
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES
+                               completion:^{
+                               }];
+    
+    UIImage* image          = [info valueForKey:UIImagePickerControllerOriginalImage];
+    
+    [self.targetImageView setImage:image];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissViewControllerAnimated:YES completion:^{
+    
+    }];
+}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+        {
+            [self pickImageFromCamera];
+        } break;
+        case 1:
+        {
+            [self pickImageFromPhotoAlbum];
+        } break;
+        default:
+            break;
+    }
+}
+
 #pragma mark - USER DEFINED METHODS
+
+- (void) presentActionsheetForMedia {
+
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:Nil otherButtonTitles:@"Capture an Image", @"Select from Album", nil];
+    [actionSheet showInView:self.view];
+}
 
 - (void)keyboardWillShow:(NSNotification*)aNotification {
     NSLog(@"inside method keyboardWillShow");
     NSDictionary* info = [aNotification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(self.tableView.contentInset.top, 0.0, kbSize.height, 0.0);
+    UIEdgeInsets contentInsets;
+    if (IS_IPHONE_5) {
+        contentInsets = UIEdgeInsetsMake(self.tableView.contentInset.top, 0.0, kbSize.height, 0.0);
+    } else {
+        contentInsets = UIEdgeInsetsMake(self.tableView.contentInset.top, 0.0, kbSize.height+90, 0.0);
+    }
+    
     self.tableView.contentInset = contentInsets;
     self.tableView.scrollIndicatorInsets = contentInsets;
 }
@@ -227,6 +291,46 @@
     self.tableView.contentInset = contentInsets;
     self.tableView.scrollIndicatorInsets = contentInsets;
     [UIView commitAnimations];
+}
+
+
+- (void)pickImageFromCamera
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        self.imagePicker = [[UIImagePickerController alloc] init];
+        [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        [self.imagePicker setDelegate:self];
+        
+        [self presentViewController:self.imagePicker animated:YES completion:^{
+            //handler here
+        }];
+    }
+    else
+    {
+        NSLog(@"UIImagePickerControllerSourceTypeCamera UNAVAILABLE!");
+        [self pickImageFromPhotoAlbum];
+    }
+}
+
+-(void)pickImageFromPhotoAlbum
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+    {
+        self.imagePicker = [[UIImagePickerController alloc] init];
+        [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+        [self.imagePicker setDelegate:self];
+        
+        [self presentViewController:_imagePicker
+                           animated:YES
+                         completion:^{
+                             //handler here
+                         }];
+    }
+    else {
+        NSLog(@"UIImagePickerControllerSourceTypeSavedPhotosAlbum UNAVAILABLE!");
+    }
 }
 
 
