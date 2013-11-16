@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Paul John Parreno. All rights reserved.
 //
 
-#import "RCCRefugeeVC.h"
+#import "RCCRefugeeDetailsVC.h"
 
 #import "RCCImageContainerTableViewCell.h"
 #import "RCCTextFieldTableViewCell.h"
@@ -16,14 +16,18 @@
 #define IDENTIFIER_ROW_TEXTFIELD @"RCC_TROW_TEXTFIELD"
 
 
-@interface RCCRefugeeVC ()
+@interface RCCRefugeeDetailsVC ()
 
+//@property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 @property (nonatomic, strong) NSMutableArray *fieldsArray;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) UIImagePickerController *imagePicker;
+@property (nonatomic, strong) UIImageView *targetImageView;
+
 
 @end
 
-@implementation RCCRefugeeVC
+@implementation RCCRefugeeDetailsVC
 
 - (void)viewDidLoad
 {
@@ -73,7 +77,6 @@
     NSString *cellIdentifier;
     
     
-    
     if (indexPath.row == 0) {
         cellIdentifier = IDENTIFIER_ROW_IMAGECONTAINER;
         cell = (RCCImageContainerTableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -88,7 +91,9 @@
                 }
             }
             
-            //                RCCImageContainerTableViewCell *row1Cell = (RCCImageContainerTableViewCell *)cell;
+            RCCImageContainerTableViewCell *row1Cell = (RCCImageContainerTableViewCell *)cell;
+            self.targetImageView = row1Cell.photoView;
+            [row1Cell.editButton addTarget:self action:@selector(presentActionsheetForMedia) forControlEvents:UIControlEventTouchUpInside];
             
         }
         
@@ -113,45 +118,45 @@
 //            rowCell.textField.delegate = self;
             
 //            self.keyboardControls.fields = nil;
-            [self.fieldsArray addObject:rowCell.textLabel];
+            [self.fieldsArray addObject:rowCell.textLabel.text];
 //            self.keyboardControls.fields = self.fieldsArray;
             
             switch (indexPath.row) {
                 case 1:
                 {
-                    rowCell.textLabel.text = @"First Name";
+                    rowCell.textLabel.text = @"First Name:";
                 } break;
                 case 2:
                 {
-                    rowCell.textLabel.text = @"Last Name";
+                    rowCell.textLabel.text = @"Last Name:";
                 } break;
                 case 3:
                 {
-                    rowCell.textLabel.text = @"Sex";
+                    rowCell.textLabel.text = @"Sex:";
                 } break;
                 case 4:
                 {
-                    rowCell.textLabel.text = @"Status";
+                    rowCell.textLabel.text = @"Status:";
                 } break;
                 case 5:
                 {
-                    rowCell.textLabel.text = @"Age";
+                    rowCell.textLabel.text = @"Age:";
                 } break;
                 case 6:
                 {
-                    rowCell.textLabel.text = @"Street Address";
+                    rowCell.textLabel.text = @"Street Address:";
                 } break;
                 case 7:
                 {
-                    rowCell.textLabel.text = @"City";
+                    rowCell.textLabel.text = @"City:";
                 } break;
                 case 8:
                 {
-                    rowCell.textLabel.text = @"Province";
+                    rowCell.textLabel.text = @"Province:";
                 } break;
                 case 9:
                 {
-                    rowCell.textLabel.text = @"Last Known Location";
+                    rowCell.textLabel.text = @"Last Known Location:";
                 } break;
                     
             }
@@ -174,22 +179,64 @@
 
 #pragma mark - BSKeyboardControlsDelegate
 
-- (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
+//- (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
+//{
+//    UIView *view;
+//    
+//    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+//        view = field.superview.superview;
+//    } else {
+//        view = field.superview.superview.superview;
+//    }
+//    
+//    [self.tableView scrollRectToVisible:view.frame animated:YES];
+//}
+
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    UIView *view;
-    
-    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
-        view = field.superview.superview;
-    } else {
-        view = field.superview.superview.superview;
+    switch (buttonIndex) {
+        case 0:
+        {
+            [self pickImageFromCamera];
+        } break;
+        case 1:
+        {
+            [self pickImageFromPhotoAlbum];
+        } break;
+        default:
+            break;
     }
+}
+
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES
+                               completion:^{
+                               }];
     
-    [self.tableView scrollRectToVisible:view.frame animated:YES];
+    UIImage* image          = [info valueForKey:UIImagePickerControllerOriginalImage];
+    
+    [self.targetImageView setImage:image];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 
-
 #pragma mark - USER DEFINED METHODS
+- (void) presentActionsheetForMedia {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:Nil otherButtonTitles:@"Capture an Image", @"Select from Album", nil];
+    [actionSheet showInView:self.view];
+}
 
 - (void)keyboardWillShow:(NSNotification*)aNotification {
     NSLog(@"inside method keyboardWillShow");
@@ -209,6 +256,45 @@
     self.tableView.contentInset = contentInsets;
     self.tableView.scrollIndicatorInsets = contentInsets;
     [UIView commitAnimations];
+}
+
+- (void)pickImageFromCamera
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        self.imagePicker = [[UIImagePickerController alloc] init];
+        [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        [self.imagePicker setDelegate:self];
+        
+        [self presentViewController:self.imagePicker animated:YES completion:^{
+            //handler here
+        }];
+    }
+    else
+    {
+        NSLog(@"UIImagePickerControllerSourceTypeCamera UNAVAILABLE!");
+        [self pickImageFromPhotoAlbum];
+    }
+}
+
+-(void)pickImageFromPhotoAlbum
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+    {
+        self.imagePicker = [[UIImagePickerController alloc] init];
+        [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+        [self.imagePicker setDelegate:self];
+        
+        [self presentViewController:_imagePicker
+                           animated:YES
+                         completion:^{
+                             //handler here
+                         }];
+    }
+    else {
+        NSLog(@"UIImagePickerControllerSourceTypeSavedPhotosAlbum UNAVAILABLE!");
+    }
 }
 
 

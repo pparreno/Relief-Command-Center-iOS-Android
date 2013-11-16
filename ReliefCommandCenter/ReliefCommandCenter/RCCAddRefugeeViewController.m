@@ -263,7 +263,11 @@
 
 - (void) presentActionsheetForMedia {
 
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:Nil otherButtonTitles:@"Capture an Image", @"Select from Album", nil];
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Option"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:Nil
+                                                    otherButtonTitles:@"Capture an Image", @"Select from Album", nil];
     [actionSheet showInView:self.view];
 }
 
