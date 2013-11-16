@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BSKeyboardControls.h"
 
-@interface RCCRefugeeVC : UIViewController <UITableViewDelegate, UITableViewDataSource, BSKeyboardControlsDelegate, UITextFieldDelegate>
+@interface RCCRefugeeVC : UIViewController <UITableViewDelegate, UITableViewDataSource, BSKeyboardControlsDelegate, UITextFieldDelegate,UIActionSheetDelegate,UIImagePickerControllerDelegate>
 
 
 @end

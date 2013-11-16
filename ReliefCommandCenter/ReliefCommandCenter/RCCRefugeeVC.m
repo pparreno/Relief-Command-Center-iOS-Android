@@ -192,6 +192,24 @@
     [self.tableView scrollRectToVisible:view.frame animated:YES];
 }
 
+#pragma mark - UIActionSheetDelegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+        {
+            [self pickImageFromCamera];
+        } break;
+        case 1:
+        {
+            [self pickImageFromPhotoAlbum];
+        } break;
+        default:
+            break;
+    }
+}
+
 
 
 #pragma mark - USER DEFINED METHODS
@@ -219,6 +237,45 @@
     self.tableView.contentInset = contentInsets;
     self.tableView.scrollIndicatorInsets = contentInsets;
     [UIView commitAnimations];
+}
+
+- (void)pickImageFromCamera
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        self.imagePicker = [[UIImagePickerController alloc] init];
+        [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        self.imagePicker.cameraDevice = UIImagePickerControllerCameraDeviceRear;
+        [self.imagePicker setDelegate:self];
+        
+        [self presentViewController:self.imagePicker animated:YES completion:^{
+            //handler here
+        }];
+    }
+    else
+    {
+        NSLog(@"UIImagePickerControllerSourceTypeCamera UNAVAILABLE!");
+        [self pickImageFromPhotoAlbum];
+    }
+}
+
+-(void)pickImageFromPhotoAlbum
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum])
+    {
+        self.imagePicker = [[UIImagePickerController alloc] init];
+        [self.imagePicker setSourceType:UIImagePickerControllerSourceTypeSavedPhotosAlbum];
+        [self.imagePicker setDelegate:self];
+        
+        [self presentViewController:_imagePicker
+                           animated:YES
+                         completion:^{
+                             //handler here
+                         }];
+    }
+    else {
+        NSLog(@"UIImagePickerControllerSourceTypeSavedPhotosAlbum UNAVAILABLE!");
+    }
 }
 
 
