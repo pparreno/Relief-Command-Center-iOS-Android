@@ -24,6 +24,10 @@
 		4CB471981837D08A00D2102A /* RCCImageContainerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */; };
 		4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */; };
 		4CB4719D1837DBAE00D2102A /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CB4719C1837DBAE00D2102A /* avatar@2x.png */; };
+		4CB471A21837DD2F00D2102A /* RCCTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471A11837DD2F00D2102A /* RCCTextFieldTableViewCell.m */; };
+		4CB471A41837DD4100D2102A /* RCCTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471A31837DD4100D2102A /* RCCTextFieldTableViewCell.xib */; };
+		4CB471B01837E16A00D2102A /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471A81837E16A00D2102A /* BSKeyboardControls.m */; };
+		4CB471B11837E16A00D2102A /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471A91837E16A00D2102A /* BSKeyboardControls.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,17 @@
 		4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCImageContainerTableViewCell.m; sourceTree = "<group>"; };
 		4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCImageContainerTableViewCell.xib; sourceTree = "<group>"; };
 		4CB4719C1837DBAE00D2102A /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
+		4CB471A01837DD2F00D2102A /* RCCTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		4CB471A11837DD2F00D2102A /* RCCTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		4CB471A31837DD4100D2102A /* RCCTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		4CB471A71837E16A00D2102A /* BSKeyboardControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSKeyboardControls.h; sourceTree = "<group>"; };
+		4CB471A81837E16A00D2102A /* BSKeyboardControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSKeyboardControls.m; sourceTree = "<group>"; };
+		4CB471AA1837E16A00D2102A /* da */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = da; path = da.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		4CB471AB1837E16A00D2102A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		4CB471AC1837E16A00D2102A /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		4CB471AD1837E16A00D2102A /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/BSKeyboardControls.strings"; sourceTree = "<group>"; };
+		4CB471AE1837E16A00D2102A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
+		4CB471AF1837E16A00D2102A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +134,7 @@
 		4CB471641837CC7900D2102A /* ReliefCommandCenter */ = {
 			isa = PBXGroup;
 			children = (
+				4CB471A51837E11500D2102A /* vendor */,
 				4CB4719B1837DB9900D2102A /* images */,
 				4CB471951837D04600D2102A /* RCC Custom Table View Cells */,
 				4CB4716D1837CC7900D2102A /* RCCAppDelegate.h */,
@@ -164,9 +180,8 @@
 		4CB471951837D04600D2102A /* RCC Custom Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4CB471961837D08A00D2102A /* RCCImageContainerTableViewCell.h */,
-				4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */,
-				4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */,
+				4CB4719F1837DCDB00D2102A /* RCCTextFieldTableViewCell */,
+				4CB4719E1837DCCA00D2102A /* RCCImageContainerTableViewCell */,
 			);
 			name = "RCC Custom Table View Cells";
 			sourceTree = "<group>";
@@ -177,6 +192,44 @@
 				4CB4719C1837DBAE00D2102A /* avatar@2x.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		4CB4719E1837DCCA00D2102A /* RCCImageContainerTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4CB471961837D08A00D2102A /* RCCImageContainerTableViewCell.h */,
+				4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */,
+				4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */,
+			);
+			name = RCCImageContainerTableViewCell;
+			sourceTree = "<group>";
+		};
+		4CB4719F1837DCDB00D2102A /* RCCTextFieldTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4CB471A01837DD2F00D2102A /* RCCTextFieldTableViewCell.h */,
+				4CB471A11837DD2F00D2102A /* RCCTextFieldTableViewCell.m */,
+				4CB471A31837DD4100D2102A /* RCCTextFieldTableViewCell.xib */,
+			);
+			name = RCCTextFieldTableViewCell;
+			sourceTree = "<group>";
+		};
+		4CB471A51837E11500D2102A /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				4CB471A61837E16A00D2102A /* BSKeyboardControls */,
+			);
+			name = vendor;
+			sourceTree = "<group>";
+		};
+		4CB471A61837E16A00D2102A /* BSKeyboardControls */ = {
+			isa = PBXGroup;
+			children = (
+				4CB471A71837E16A00D2102A /* BSKeyboardControls.h */,
+				4CB471A81837E16A00D2102A /* BSKeyboardControls.m */,
+				4CB471A91837E16A00D2102A /* BSKeyboardControls.strings */,
+			);
+			path = BSKeyboardControls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +292,11 @@
 			knownRegions = (
 				en,
 				Base,
+				da,
+				pt,
+				"ru-RU",
+				ru,
+				sv,
 			);
 			mainGroup = 4CB471521837CC7900D2102A;
 			productRefGroup = 4CB4715C1837CC7900D2102A /* Products */;
@@ -256,6 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB471A41837DD4100D2102A /* RCCTextFieldTableViewCell.xib in Resources */,
+				4CB471B11837E16A00D2102A /* BSKeyboardControls.strings in Resources */,
 				4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */,
 				4CB4719D1837DBAE00D2102A /* avatar@2x.png in Resources */,
 				4CB471771837CC7900D2102A /* Images.xcassets in Resources */,
@@ -282,7 +342,9 @@
 				4CB471981837D08A00D2102A /* RCCImageContainerTableViewCell.m in Sources */,
 				4CB4716B1837CC7900D2102A /* main.m in Sources */,
 				4CB4716F1837CC7900D2102A /* RCCAppDelegate.m in Sources */,
+				4CB471A21837DD2F00D2102A /* RCCTextFieldTableViewCell.m in Sources */,
 				4CB471751837CC7900D2102A /* RCCViewController.m in Sources */,
+				4CB471B01837E16A00D2102A /* BSKeyboardControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +381,19 @@
 				4CB471871837CC7900D2102A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4CB471A91837E16A00D2102A /* BSKeyboardControls.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CB471AA1837E16A00D2102A /* da */,
+				4CB471AB1837E16A00D2102A /* en */,
+				4CB471AC1837E16A00D2102A /* pt */,
+				4CB471AD1837E16A00D2102A /* ru-RU */,
+				4CB471AE1837E16A00D2102A /* ru */,
+				4CB471AF1837E16A00D2102A /* sv */,
+			);
+			name = BSKeyboardControls.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -404,6 +479,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReliefCommandCenter/ReliefCommandCenter-Prefix.pch";
 				INFOPLIST_FILE = "ReliefCommandCenter/ReliefCommandCenter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -417,6 +493,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReliefCommandCenter/ReliefCommandCenter-Prefix.pch";
 				INFOPLIST_FILE = "ReliefCommandCenter/ReliefCommandCenter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RCCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+#import "BSKeyboardControls.h"
+
+@interface RCCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, BSKeyboardControlsDelegate, UITextFieldDelegate>
 
 
 @end
