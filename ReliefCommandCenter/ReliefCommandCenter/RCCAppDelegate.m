@@ -8,7 +8,7 @@
 
 #import "RCCAppDelegate.h"
 #import "RCCAddRefugeeViewController.h"
-#import "RCCRefugeeVC.h"
+#import "RCCRefugeeDetailsVC.h"
 
 @interface RCCAppDelegate ()
 
@@ -25,8 +25,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    RCCAddRefugeeViewController *rootVC = [[RCCAddRefugeeViewController alloc] init];
-//    RCCRefugeeVC *rootVC = [[RCCRefugeeVC alloc] init];
+//    RCCAddRefugeeViewController *rootVC = [[RCCAddRefugeeViewController alloc] init];
+    RCCRefugeeDetailsVC *rootVC = [[RCCRefugeeDetailsVC alloc] init];
     
     self.navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];
 //    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[BMUtils BMWhiteTranslucent01]] forBarMetrics:UIBarMetricsDefault];

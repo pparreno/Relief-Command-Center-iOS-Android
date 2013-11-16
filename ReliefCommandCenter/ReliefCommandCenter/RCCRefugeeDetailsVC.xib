@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RCCRefugeeVC">
             <connections>
+                <outlet property="tableView" destination="CZ4-9w-AvI" id="LB8-Yv-136"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>

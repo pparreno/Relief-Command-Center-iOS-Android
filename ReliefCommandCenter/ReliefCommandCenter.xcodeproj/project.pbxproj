@@ -31,8 +31,8 @@
 		5348E183F9D648D0AC319F43 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F060CF51E6E43FE9FA70F7E /* libPods.a */; };
 		84B7C917183814BA009C7A7A /* RCCTextLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7C915183814BA009C7A7A /* RCCTextLabelTableViewCell.m */; };
 		84B7C918183814BA009C7A7A /* RCCTextLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7C916183814BA009C7A7A /* RCCTextLabelTableViewCell.xib */; };
-		84B7C91C183814CF009C7A7A /* RCCRefugeeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7C91A183814CF009C7A7A /* RCCRefugeeVC.m */; };
-		84B7C91D183814CF009C7A7A /* RCCRefugeeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7C91B183814CF009C7A7A /* RCCRefugeeVC.xib */; };
+		84B7C91C183814CF009C7A7A /* RCCRefugeeDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7C91A183814CF009C7A7A /* RCCRefugeeDetailsVC.m */; };
+		84B7C91D183814CF009C7A7A /* RCCRefugeeDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7C91B183814CF009C7A7A /* RCCRefugeeDetailsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,9 +84,9 @@
 		84B7C914183814BA009C7A7A /* RCCTextLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCTextLabelTableViewCell.h; sourceTree = "<group>"; };
 		84B7C915183814BA009C7A7A /* RCCTextLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCTextLabelTableViewCell.m; sourceTree = "<group>"; };
 		84B7C916183814BA009C7A7A /* RCCTextLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCTextLabelTableViewCell.xib; sourceTree = "<group>"; };
-		84B7C919183814CF009C7A7A /* RCCRefugeeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRefugeeVC.h; sourceTree = "<group>"; };
-		84B7C91A183814CF009C7A7A /* RCCRefugeeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRefugeeVC.m; sourceTree = "<group>"; };
-		84B7C91B183814CF009C7A7A /* RCCRefugeeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCRefugeeVC.xib; sourceTree = "<group>"; };
+		84B7C919183814CF009C7A7A /* RCCRefugeeDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRefugeeDetailsVC.h; sourceTree = "<group>"; };
+		84B7C91A183814CF009C7A7A /* RCCRefugeeDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRefugeeDetailsVC.m; sourceTree = "<group>"; };
+		84B7C91B183814CF009C7A7A /* RCCRefugeeDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCRefugeeDetailsVC.xib; sourceTree = "<group>"; };
 		D98C5CA81FBB43F291C666BF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,9 +261,9 @@
 		4CB471B31837EB1800D2102A /* Add Refugee VC */ = {
 			isa = PBXGroup;
 			children = (
-				84B7C919183814CF009C7A7A /* RCCRefugeeVC.h */,
-				84B7C91A183814CF009C7A7A /* RCCRefugeeVC.m */,
-				84B7C91B183814CF009C7A7A /* RCCRefugeeVC.xib */,
+				84B7C919183814CF009C7A7A /* RCCRefugeeDetailsVC.h */,
+				84B7C91A183814CF009C7A7A /* RCCRefugeeDetailsVC.m */,
+				84B7C91B183814CF009C7A7A /* RCCRefugeeDetailsVC.xib */,
 				4CB471731837CC7900D2102A /* RCCAddRefugeeViewController.h */,
 				4CB471741837CC7900D2102A /* RCCAddRefugeeViewController.m */,
 				4CB471931837CD2100D2102A /* RCCAddRefugeeViewController.xib */,
@@ -362,7 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B7C91D183814CF009C7A7A /* RCCRefugeeVC.xib in Resources */,
+				84B7C91D183814CF009C7A7A /* RCCRefugeeDetailsVC.xib in Resources */,
 				4CB471A41837DD4100D2102A /* RCCTextFieldTableViewCell.xib in Resources */,
 				4CB471B11837E16A00D2102A /* BSKeyboardControls.strings in Resources */,
 				4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */,
@@ -427,7 +427,7 @@
 				4CB4716B1837CC7900D2102A /* main.m in Sources */,
 				4CB4716F1837CC7900D2102A /* RCCAppDelegate.m in Sources */,
 				4CB471A21837DD2F00D2102A /* RCCTextFieldTableViewCell.m in Sources */,
-				84B7C91C183814CF009C7A7A /* RCCRefugeeVC.m in Sources */,
+				84B7C91C183814CF009C7A7A /* RCCRefugeeDetailsVC.m in Sources */,
 				4CB471751837CC7900D2102A /* RCCAddRefugeeViewController.m in Sources */,
 				4CB471B01837E16A00D2102A /* BSKeyboardControls.m in Sources */,
 			);

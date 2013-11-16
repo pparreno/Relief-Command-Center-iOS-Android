@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Paul John Parreno. All rights reserved.
 //
 
-#import "RCCRefugeeVC.h"
+#import "RCCRefugeeDetailsVC.h"
 
 #import "RCCImageContainerTableViewCell.h"
 #import "RCCTextFieldTableViewCell.h"
@@ -16,7 +16,7 @@
 #define IDENTIFIER_ROW_TEXTFIELD @"RCC_TROW_TEXTFIELD"
 
 
-@interface RCCRefugeeVC ()
+@interface RCCRefugeeDetailsVC ()
 
 //@property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 @property (nonatomic, strong) NSMutableArray *fieldsArray;
@@ -27,7 +27,7 @@
 
 @end
 
-@implementation RCCRefugeeVC
+@implementation RCCRefugeeDetailsVC
 
 - (void)viewDidLoad
 {
@@ -124,39 +124,39 @@
             switch (indexPath.row) {
                 case 1:
                 {
-                    rowCell.textLabel.text = @"First Name";
+                    rowCell.textLabel.text = @"First Name:";
                 } break;
                 case 2:
                 {
-                    rowCell.textLabel.text = @"Last Name";
+                    rowCell.textLabel.text = @"Last Name:";
                 } break;
                 case 3:
                 {
-                    rowCell.textLabel.text = @"Sex";
+                    rowCell.textLabel.text = @"Sex:";
                 } break;
                 case 4:
                 {
-                    rowCell.textLabel.text = @"Status";
+                    rowCell.textLabel.text = @"Status:";
                 } break;
                 case 5:
                 {
-                    rowCell.textLabel.text = @"Age";
+                    rowCell.textLabel.text = @"Age:";
                 } break;
                 case 6:
                 {
-                    rowCell.textLabel.text = @"Street Address";
+                    rowCell.textLabel.text = @"Street Address:";
                 } break;
                 case 7:
                 {
-                    rowCell.textLabel.text = @"City";
+                    rowCell.textLabel.text = @"City:";
                 } break;
                 case 8:
                 {
-                    rowCell.textLabel.text = @"Province";
+                    rowCell.textLabel.text = @"Province:";
                 } break;
                 case 9:
                 {
-                    rowCell.textLabel.text = @"Last Known Location";
+                    rowCell.textLabel.text = @"Last Known Location:";
                 } break;
                     
             }
@@ -179,18 +179,18 @@
 
 #pragma mark - BSKeyboardControlsDelegate
 
-- (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
-{
-    UIView *view;
-    
-    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
-        view = field.superview.superview;
-    } else {
-        view = field.superview.superview.superview;
-    }
-    
-    [self.tableView scrollRectToVisible:view.frame animated:YES];
-}
+//- (void)keyboardControls:(BSKeyboardControls *)keyboardControls selectedField:(UIView *)field inDirection:(BSKeyboardControlsDirection)direction
+//{
+//    UIView *view;
+//    
+//    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+//        view = field.superview.superview;
+//    } else {
+//        view = field.superview.superview.superview;
+//    }
+//    
+//    [self.tableView scrollRectToVisible:view.frame animated:YES];
+//}
 
 #pragma mark - UIActionSheetDelegate
 
@@ -210,6 +210,25 @@
     }
 }
 
+#pragma mark - UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [picker dismissViewControllerAnimated:YES
+                               completion:^{
+                               }];
+    
+    UIImage* image          = [info valueForKey:UIImagePickerControllerOriginalImage];
+    
+    [self.targetImageView setImage:image];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
 
 
 #pragma mark - USER DEFINED METHODS
