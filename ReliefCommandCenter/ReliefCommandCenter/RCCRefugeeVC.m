@@ -18,8 +18,12 @@
 
 @interface RCCRefugeeVC ()
 
+//@property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 @property (nonatomic, strong) NSMutableArray *fieldsArray;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) UIImagePickerController *imagePicker;
+@property (nonatomic, strong) UIImageView *targetImageView;
+
 
 @end
 
@@ -73,7 +77,6 @@
     NSString *cellIdentifier;
     
     
-    
     if (indexPath.row == 0) {
         cellIdentifier = IDENTIFIER_ROW_IMAGECONTAINER;
         cell = (RCCImageContainerTableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
@@ -88,7 +91,9 @@
                 }
             }
             
-            //                RCCImageContainerTableViewCell *row1Cell = (RCCImageContainerTableViewCell *)cell;
+            RCCImageContainerTableViewCell *row1Cell = (RCCImageContainerTableViewCell *)cell;
+            self.targetImageView = row1Cell.photoView;
+            [row1Cell.editButton addTarget:self action:@selector(presentActionsheetForMedia) forControlEvents:UIControlEventTouchUpInside];
             
         }
         
@@ -113,7 +118,7 @@
 //            rowCell.textField.delegate = self;
             
 //            self.keyboardControls.fields = nil;
-            [self.fieldsArray addObject:rowCell.textLabel];
+            [self.fieldsArray addObject:rowCell.textLabel.text];
 //            self.keyboardControls.fields = self.fieldsArray;
             
             switch (indexPath.row) {
@@ -190,6 +195,11 @@
 
 
 #pragma mark - USER DEFINED METHODS
+- (void) presentActionsheetForMedia {
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Select Option" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:Nil otherButtonTitles:@"Capture an Image", @"Select from Album", nil];
+    [actionSheet showInView:self.view];
+}
 
 - (void)keyboardWillShow:(NSNotification*)aNotification {
     NSLog(@"inside method keyboardWillShow");
