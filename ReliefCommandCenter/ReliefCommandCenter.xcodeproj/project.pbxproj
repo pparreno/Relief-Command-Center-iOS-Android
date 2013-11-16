@@ -28,13 +28,16 @@
 		4CB471A41837DD4100D2102A /* RCCTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471A31837DD4100D2102A /* RCCTextFieldTableViewCell.xib */; };
 		4CB471B01837E16A00D2102A /* BSKeyboardControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471A81837E16A00D2102A /* BSKeyboardControls.m */; };
 		4CB471B11837E16A00D2102A /* BSKeyboardControls.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471A91837E16A00D2102A /* BSKeyboardControls.strings */; };
-		4CB471C3183814F800D2102A /* RCCRefugeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471C1183814F800D2102A /* RCCRefugeeListViewController.m */; };
-		4CB471C4183814F800D2102A /* RCCRefugeeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471C2183814F800D2102A /* RCCRefugeeListViewController.xib */; };
-		4CB471C81838151F00D2102A /* Refugee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471C71838151F00D2102A /* Refugee.m */; };
-		4CB471CF1838157500D2102A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471CE1838157500D2102A /* Person.m */; };
-		4CB471D2183817F000D2102A /* Volunteer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471D1183817F000D2102A /* Volunteer.m */; };
-		4CB471D51838186100D2102A /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471D41838186100D2102A /* Service.m */; };
+		4CB471DD183820A000D2102A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471D8183820A000D2102A /* Person.m */; };
+		4CB471DE183820A000D2102A /* Refugee.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471DA183820A000D2102A /* Refugee.m */; };
+		4CB471DF183820A000D2102A /* Service.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471DC183820A000D2102A /* Service.m */; };
+		4CB471E3183820CC00D2102A /* RCCRefugeeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471E1183820CC00D2102A /* RCCRefugeeListViewController.m */; };
+		4CB471E4183820CC00D2102A /* RCCRefugeeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471E2183820CC00D2102A /* RCCRefugeeListViewController.xib */; };
 		5348E183F9D648D0AC319F43 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F060CF51E6E43FE9FA70F7E /* libPods.a */; };
+		84B7C917183814BA009C7A7A /* RCCTextLabelTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7C915183814BA009C7A7A /* RCCTextLabelTableViewCell.m */; };
+		84B7C918183814BA009C7A7A /* RCCTextLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7C916183814BA009C7A7A /* RCCTextLabelTableViewCell.xib */; };
+		84B7C91C183814CF009C7A7A /* RCCRefugeeDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B7C91A183814CF009C7A7A /* RCCRefugeeDetailsVC.m */; };
+		84B7C91D183814CF009C7A7A /* RCCRefugeeDetailsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B7C91B183814CF009C7A7A /* RCCRefugeeDetailsVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,18 +85,22 @@
 		4CB471AD1837E16A00D2102A /* ru-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ru-RU"; path = "ru-RU.lproj/BSKeyboardControls.strings"; sourceTree = "<group>"; };
 		4CB471AE1837E16A00D2102A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
 		4CB471AF1837E16A00D2102A /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/BSKeyboardControls.strings; sourceTree = "<group>"; };
-		4CB471C0183814F800D2102A /* RCCRefugeeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRefugeeListViewController.h; sourceTree = "<group>"; };
-		4CB471C1183814F800D2102A /* RCCRefugeeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRefugeeListViewController.m; sourceTree = "<group>"; };
-		4CB471C2183814F800D2102A /* RCCRefugeeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCRefugeeListViewController.xib; sourceTree = "<group>"; };
-		4CB471C61838151F00D2102A /* Refugee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Refugee.h; sourceTree = "<group>"; };
-		4CB471C71838151F00D2102A /* Refugee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Refugee.m; sourceTree = "<group>"; };
-		4CB471CD1838157500D2102A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
-		4CB471CE1838157500D2102A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		4CB471D0183817F000D2102A /* Volunteer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volunteer.h; sourceTree = "<group>"; };
-		4CB471D1183817F000D2102A /* Volunteer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Volunteer.m; sourceTree = "<group>"; };
-		4CB471D31838186100D2102A /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
-		4CB471D41838186100D2102A /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		4CB471D7183820A000D2102A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		4CB471D8183820A000D2102A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		4CB471D9183820A000D2102A /* Refugee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Refugee.h; sourceTree = "<group>"; };
+		4CB471DA183820A000D2102A /* Refugee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Refugee.m; sourceTree = "<group>"; };
+		4CB471DB183820A000D2102A /* Service.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Service.h; sourceTree = "<group>"; };
+		4CB471DC183820A000D2102A /* Service.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Service.m; sourceTree = "<group>"; };
+		4CB471E0183820CC00D2102A /* RCCRefugeeListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRefugeeListViewController.h; sourceTree = "<group>"; };
+		4CB471E1183820CC00D2102A /* RCCRefugeeListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRefugeeListViewController.m; sourceTree = "<group>"; };
+		4CB471E2183820CC00D2102A /* RCCRefugeeListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCRefugeeListViewController.xib; sourceTree = "<group>"; };
 		6F060CF51E6E43FE9FA70F7E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B7C914183814BA009C7A7A /* RCCTextLabelTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCTextLabelTableViewCell.h; sourceTree = "<group>"; };
+		84B7C915183814BA009C7A7A /* RCCTextLabelTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCTextLabelTableViewCell.m; sourceTree = "<group>"; };
+		84B7C916183814BA009C7A7A /* RCCTextLabelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCTextLabelTableViewCell.xib; sourceTree = "<group>"; };
+		84B7C919183814CF009C7A7A /* RCCRefugeeDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCRefugeeDetailsVC.h; sourceTree = "<group>"; };
+		84B7C91A183814CF009C7A7A /* RCCRefugeeDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCRefugeeDetailsVC.m; sourceTree = "<group>"; };
+		84B7C91B183814CF009C7A7A /* RCCRefugeeDetailsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCRefugeeDetailsVC.xib; sourceTree = "<group>"; };
 		D98C5CA81FBB43F291C666BF /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,7 +164,7 @@
 		4CB471641837CC7900D2102A /* ReliefCommandCenter */ = {
 			isa = PBXGroup;
 			children = (
-				4CB471C51838150000D2102A /* models */,
+				4CB471D61838207300D2102A /* models */,
 				4CB471B21837EB0600D2102A /* View Controllers */,
 				4CB471A51837E11500D2102A /* vendor */,
 				4CB4719B1837DB9900D2102A /* images */,
@@ -202,6 +209,9 @@
 		4CB471951837D04600D2102A /* RCC Custom Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
+				84B7C914183814BA009C7A7A /* RCCTextLabelTableViewCell.h */,
+				84B7C915183814BA009C7A7A /* RCCTextLabelTableViewCell.m */,
+				84B7C916183814BA009C7A7A /* RCCTextLabelTableViewCell.xib */,
 				4CB4719F1837DCDB00D2102A /* RCCTextFieldTableViewCell */,
 				4CB4719E1837DCCA00D2102A /* RCCImageContainerTableViewCell */,
 			);
@@ -257,7 +267,7 @@
 		4CB471B21837EB0600D2102A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4CB471B41837ED2D00D2102A /* Refugee List */,
+				4CB471B41837ED2D00D2102A /* Refugee List VC */,
 				4CB471B31837EB1800D2102A /* Add Refugee VC */,
 			);
 			name = "View Controllers";
@@ -266,6 +276,9 @@
 		4CB471B31837EB1800D2102A /* Add Refugee VC */ = {
 			isa = PBXGroup;
 			children = (
+				84B7C919183814CF009C7A7A /* RCCRefugeeDetailsVC.h */,
+				84B7C91A183814CF009C7A7A /* RCCRefugeeDetailsVC.m */,
+				84B7C91B183814CF009C7A7A /* RCCRefugeeDetailsVC.xib */,
 				4CB471731837CC7900D2102A /* RCCAddRefugeeViewController.h */,
 				4CB471741837CC7900D2102A /* RCCAddRefugeeViewController.m */,
 				4CB471931837CD2100D2102A /* RCCAddRefugeeViewController.xib */,
@@ -273,27 +286,25 @@
 			name = "Add Refugee VC";
 			sourceTree = "<group>";
 		};
-		4CB471B41837ED2D00D2102A /* Refugee List */ = {
+		4CB471B41837ED2D00D2102A /* Refugee List VC */ = {
 			isa = PBXGroup;
 			children = (
-				4CB471C0183814F800D2102A /* RCCRefugeeListViewController.h */,
-				4CB471C1183814F800D2102A /* RCCRefugeeListViewController.m */,
-				4CB471C2183814F800D2102A /* RCCRefugeeListViewController.xib */,
+				4CB471E0183820CC00D2102A /* RCCRefugeeListViewController.h */,
+				4CB471E1183820CC00D2102A /* RCCRefugeeListViewController.m */,
+				4CB471E2183820CC00D2102A /* RCCRefugeeListViewController.xib */,
 			);
-			name = "Refugee List";
+			name = "Refugee List VC";
 			sourceTree = "<group>";
 		};
-		4CB471C51838150000D2102A /* models */ = {
+		4CB471D61838207300D2102A /* models */ = {
 			isa = PBXGroup;
 			children = (
-				4CB471C61838151F00D2102A /* Refugee.h */,
-				4CB471C71838151F00D2102A /* Refugee.m */,
-				4CB471CD1838157500D2102A /* Person.h */,
-				4CB471CE1838157500D2102A /* Person.m */,
-				4CB471D0183817F000D2102A /* Volunteer.h */,
-				4CB471D1183817F000D2102A /* Volunteer.m */,
-				4CB471D31838186100D2102A /* Service.h */,
-				4CB471D41838186100D2102A /* Service.m */,
+				4CB471D7183820A000D2102A /* Person.h */,
+				4CB471D8183820A000D2102A /* Person.m */,
+				4CB471D9183820A000D2102A /* Refugee.h */,
+				4CB471DA183820A000D2102A /* Refugee.m */,
+				4CB471DB183820A000D2102A /* Service.h */,
+				4CB471DC183820A000D2102A /* Service.m */,
 			);
 			name = models;
 			sourceTree = "<group>";
@@ -382,13 +393,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B7C91D183814CF009C7A7A /* RCCRefugeeDetailsVC.xib in Resources */,
 				4CB471A41837DD4100D2102A /* RCCTextFieldTableViewCell.xib in Resources */,
 				4CB471B11837E16A00D2102A /* BSKeyboardControls.strings in Resources */,
 				4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */,
+				4CB471E4183820CC00D2102A /* RCCRefugeeListViewController.xib in Resources */,
 				4CB4719D1837DBAE00D2102A /* avatar@2x.png in Resources */,
 				4CB471771837CC7900D2102A /* Images.xcassets in Resources */,
 				4CB471941837CD2200D2102A /* RCCAddRefugeeViewController.xib in Resources */,
-				4CB471C4183814F800D2102A /* RCCRefugeeListViewController.xib in Resources */,
+				84B7C918183814BA009C7A7A /* RCCTextLabelTableViewCell.xib in Resources */,
 				4CB471691837CC7900D2102A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,16 +455,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CB471981837D08A00D2102A /* RCCImageContainerTableViewCell.m in Sources */,
+				4CB471DE183820A000D2102A /* Refugee.m in Sources */,
+				84B7C917183814BA009C7A7A /* RCCTextLabelTableViewCell.m in Sources */,
 				4CB4716B1837CC7900D2102A /* main.m in Sources */,
-				4CB471D2183817F000D2102A /* Volunteer.m in Sources */,
 				4CB4716F1837CC7900D2102A /* RCCAppDelegate.m in Sources */,
 				4CB471A21837DD2F00D2102A /* RCCTextFieldTableViewCell.m in Sources */,
+				4CB471DF183820A000D2102A /* Service.m in Sources */,
+				4CB471E3183820CC00D2102A /* RCCRefugeeListViewController.m in Sources */,
+				84B7C91C183814CF009C7A7A /* RCCRefugeeDetailsVC.m in Sources */,
+				4CB471DD183820A000D2102A /* Person.m in Sources */,
 				4CB471751837CC7900D2102A /* RCCAddRefugeeViewController.m in Sources */,
-				4CB471D51838186100D2102A /* Service.m in Sources */,
 				4CB471B01837E16A00D2102A /* BSKeyboardControls.m in Sources */,
-				4CB471CF1838157500D2102A /* Person.m in Sources */,
-				4CB471C3183814F800D2102A /* RCCRefugeeListViewController.m in Sources */,
-				4CB471C81838151F00D2102A /* Refugee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
