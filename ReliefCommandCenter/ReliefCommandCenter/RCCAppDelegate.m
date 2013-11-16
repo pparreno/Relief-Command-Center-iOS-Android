@@ -7,7 +7,7 @@
 //
 
 #import "RCCAppDelegate.h"
-#import "RCCViewController.h"
+#import "RCCAddRefugeeViewController.h"
 
 @interface RCCAppDelegate ()
 
@@ -24,7 +24,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-    RCCViewController *rootVC = [[RCCViewController alloc] init];
+    RCCAddRefugeeViewController *rootVC = [[RCCAddRefugeeViewController alloc] init];
     
     
     self.navigationController = [[UINavigationController alloc]initWithRootViewController:rootVC];

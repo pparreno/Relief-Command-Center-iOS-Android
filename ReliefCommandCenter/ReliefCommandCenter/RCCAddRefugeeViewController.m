@@ -1,12 +1,12 @@
 //
-//  RCCViewController.m
+//  RCCAddRefugeeViewController.m
 //  ReliefCommandCenter
 //
 //  Created by Paul John Parreno on 11/16/13.
 //  Copyright (c) 2013 Paul John Parreno. All rights reserved.
 //
 
-#import "RCCViewController.h"
+#import "RCCAddRefugeeViewController.h"
 
 #import "RCCImageContainerTableViewCell.h"
 #import "RCCTextFieldTableViewCell.h"
@@ -16,7 +16,7 @@
 #define IDENTIFIER_ROW_TEXTFIELD @"RCC_TROW_TEXTFIELD"
 
 
-@interface RCCViewController ()
+@interface RCCAddRefugeeViewController ()
 
 @property (nonatomic, strong) BSKeyboardControls *keyboardControls;
 @property (nonatomic, strong) NSMutableArray *fieldsArray;
@@ -24,7 +24,7 @@
 
 @end
 
-@implementation RCCViewController
+@implementation RCCAddRefugeeViewController
 
 - (void)viewDidLoad
 {
