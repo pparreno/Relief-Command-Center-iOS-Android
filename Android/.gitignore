@@ -1,0 +1,10 @@
+target
+tmp
+gen
+bin
+*/Thumbs.db
+.settings
+.project
+.classpath
+*.svn
+Thumbs.db
