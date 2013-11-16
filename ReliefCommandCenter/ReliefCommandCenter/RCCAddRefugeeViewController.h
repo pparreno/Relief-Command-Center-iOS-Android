@@ -1,5 +1,5 @@
 //
-//  RCCViewController.h
+//  RCCAddRefugeeViewController.h
 //  ReliefCommandCenter
 //
 //  Created by Paul John Parreno on 11/16/13.
@@ -10,7 +10,7 @@
 
 #import "BSKeyboardControls.h"
 
-@interface RCCViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, BSKeyboardControlsDelegate, UITextFieldDelegate>
+@interface RCCAddRefugeeViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, BSKeyboardControlsDelegate, UITextFieldDelegate>
 
 
 @end

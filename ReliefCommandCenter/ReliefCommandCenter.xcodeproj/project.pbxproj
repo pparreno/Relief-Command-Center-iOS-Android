@@ -13,14 +13,14 @@
 		4CB471691837CC7900D2102A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471671837CC7900D2102A /* InfoPlist.strings */; };
 		4CB4716B1837CC7900D2102A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB4716A1837CC7900D2102A /* main.m */; };
 		4CB4716F1837CC7900D2102A /* RCCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB4716E1837CC7900D2102A /* RCCAppDelegate.m */; };
-		4CB471751837CC7900D2102A /* RCCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471741837CC7900D2102A /* RCCViewController.m */; };
+		4CB471751837CC7900D2102A /* RCCAddRefugeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471741837CC7900D2102A /* RCCAddRefugeeViewController.m */; };
 		4CB471771837CC7900D2102A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471761837CC7900D2102A /* Images.xcassets */; };
 		4CB4717E1837CC7900D2102A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB4717D1837CC7900D2102A /* XCTest.framework */; };
 		4CB4717F1837CC7900D2102A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB4715E1837CC7900D2102A /* Foundation.framework */; };
 		4CB471801837CC7900D2102A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB471621837CC7900D2102A /* UIKit.framework */; };
 		4CB471881837CC7900D2102A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471861837CC7900D2102A /* InfoPlist.strings */; };
 		4CB4718A1837CC7900D2102A /* ReliefCommandCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471891837CC7900D2102A /* ReliefCommandCenterTests.m */; };
-		4CB471941837CD2200D2102A /* RCCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471931837CD2100D2102A /* RCCViewController.xib */; };
+		4CB471941837CD2200D2102A /* RCCAddRefugeeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471931837CD2100D2102A /* RCCAddRefugeeViewController.xib */; };
 		4CB471981837D08A00D2102A /* RCCImageContainerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */; };
 		4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */; };
 		4CB4719D1837DBAE00D2102A /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4CB4719C1837DBAE00D2102A /* avatar@2x.png */; };
@@ -51,15 +51,15 @@
 		4CB4716C1837CC7900D2102A /* ReliefCommandCenter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReliefCommandCenter-Prefix.pch"; sourceTree = "<group>"; };
 		4CB4716D1837CC7900D2102A /* RCCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCCAppDelegate.h; sourceTree = "<group>"; };
 		4CB4716E1837CC7900D2102A /* RCCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCCAppDelegate.m; sourceTree = "<group>"; };
-		4CB471731837CC7900D2102A /* RCCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCCViewController.h; sourceTree = "<group>"; };
-		4CB471741837CC7900D2102A /* RCCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCCViewController.m; sourceTree = "<group>"; };
+		4CB471731837CC7900D2102A /* RCCAddRefugeeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCCAddRefugeeViewController.h; sourceTree = "<group>"; };
+		4CB471741837CC7900D2102A /* RCCAddRefugeeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCCAddRefugeeViewController.m; sourceTree = "<group>"; };
 		4CB471761837CC7900D2102A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4CB4717C1837CC7900D2102A /* ReliefCommandCenterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReliefCommandCenterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB4717D1837CC7900D2102A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4CB471851837CC7900D2102A /* ReliefCommandCenterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReliefCommandCenterTests-Info.plist"; sourceTree = "<group>"; };
 		4CB471871837CC7900D2102A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CB471891837CC7900D2102A /* ReliefCommandCenterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReliefCommandCenterTests.m; sourceTree = "<group>"; };
-		4CB471931837CD2100D2102A /* RCCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCViewController.xib; sourceTree = "<group>"; };
+		4CB471931837CD2100D2102A /* RCCAddRefugeeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCAddRefugeeViewController.xib; sourceTree = "<group>"; };
 		4CB471961837D08A00D2102A /* RCCImageContainerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCImageContainerTableViewCell.h; sourceTree = "<group>"; };
 		4CB471971837D08A00D2102A /* RCCImageContainerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCImageContainerTableViewCell.m; sourceTree = "<group>"; };
 		4CB471991837D0F800D2102A /* RCCImageContainerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCCImageContainerTableViewCell.xib; sourceTree = "<group>"; };
@@ -134,14 +134,12 @@
 		4CB471641837CC7900D2102A /* ReliefCommandCenter */ = {
 			isa = PBXGroup;
 			children = (
+				4CB471B21837EB0600D2102A /* View Controllers */,
 				4CB471A51837E11500D2102A /* vendor */,
 				4CB4719B1837DB9900D2102A /* images */,
 				4CB471951837D04600D2102A /* RCC Custom Table View Cells */,
 				4CB4716D1837CC7900D2102A /* RCCAppDelegate.h */,
 				4CB4716E1837CC7900D2102A /* RCCAppDelegate.m */,
-				4CB471731837CC7900D2102A /* RCCViewController.h */,
-				4CB471741837CC7900D2102A /* RCCViewController.m */,
-				4CB471931837CD2100D2102A /* RCCViewController.xib */,
 				4CB471761837CC7900D2102A /* Images.xcassets */,
 				4CB471651837CC7900D2102A /* Supporting Files */,
 			);
@@ -232,6 +230,24 @@
 			path = BSKeyboardControls;
 			sourceTree = "<group>";
 		};
+		4CB471B21837EB0600D2102A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4CB471B31837EB1800D2102A /* Add Refugee VC */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4CB471B31837EB1800D2102A /* Add Refugee VC */ = {
+			isa = PBXGroup;
+			children = (
+				4CB471731837CC7900D2102A /* RCCAddRefugeeViewController.h */,
+				4CB471741837CC7900D2102A /* RCCAddRefugeeViewController.m */,
+				4CB471931837CD2100D2102A /* RCCAddRefugeeViewController.xib */,
+			);
+			name = "Add Refugee VC";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -319,7 +335,7 @@
 				4CB4719A1837D0F800D2102A /* RCCImageContainerTableViewCell.xib in Resources */,
 				4CB4719D1837DBAE00D2102A /* avatar@2x.png in Resources */,
 				4CB471771837CC7900D2102A /* Images.xcassets in Resources */,
-				4CB471941837CD2200D2102A /* RCCViewController.xib in Resources */,
+				4CB471941837CD2200D2102A /* RCCAddRefugeeViewController.xib in Resources */,
 				4CB471691837CC7900D2102A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +359,7 @@
 				4CB4716B1837CC7900D2102A /* main.m in Sources */,
 				4CB4716F1837CC7900D2102A /* RCCAppDelegate.m in Sources */,
 				4CB471A21837DD2F00D2102A /* RCCTextFieldTableViewCell.m in Sources */,
-				4CB471751837CC7900D2102A /* RCCViewController.m in Sources */,
+				4CB471751837CC7900D2102A /* RCCAddRefugeeViewController.m in Sources */,
 				4CB471B01837E16A00D2102A /* BSKeyboardControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
