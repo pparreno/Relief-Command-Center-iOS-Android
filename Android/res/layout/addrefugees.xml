@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_layout" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/takePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="goTakePhoto"
+            android:background="@drawable/ic_menu_camera" />
+
+        <Button
+            android:id="@+id/getFromGal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="goGetFromGallery"
+            android:background="@drawable/gallery" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/person" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Information"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+ 	<ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+       
+ 	  <LinearLayout
+        android:id="@+id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+       
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="First Name"
+            android:singleLine="true">
+        </EditText>
+        
+         <EditText
+            android:id="@+id/familyName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Family Name"
+            android:singleLine="true">
+        </EditText>
+        
+         <EditText
+            android:id="@+id/sex"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Sex"
+            android:singleLine="true">
+        </EditText>
+        
+         <EditText
+            android:id="@+id/status"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Status"
+            android:singleLine="true">
+        </EditText>
+        
+          <EditText
+            android:id="@+id/age"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:singleLine="true">
+        </EditText>
+        
+        <EditText
+            android:id="@+id/streetAddress"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Street Address"
+            android:singleLine="true">
+        </EditText>
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="City"
+            android:singleLine="true">
+        </EditText>
+        
+         <EditText
+            android:id="@+id/province"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Province"
+            android:singleLine="true">
+        </EditText>
+        
+         <EditText
+            android:id="@+id/lastKnownLoc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="Last Known Location"
+            android:singleLine="true">
+        </EditText>
+        
+        <Button
+	        android:id="@+id/submit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:onClick="goSubmit"
+	        android:text="SUBMIT" />
+         
+
+    </LinearLayout>
+  
+ </ScrollView>
+    
+
+
+</LinearLayout>

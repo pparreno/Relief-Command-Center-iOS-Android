@@ -10,6 +10,7 @@ public class Contact {
 	public void setGivenName(String GiveName){
 		this.mGivenName = GiveName;
 	}
+	
 	public void setFamilyName(String FamilyName){
 		this.mFamilyName = FamilyName;
 	}
